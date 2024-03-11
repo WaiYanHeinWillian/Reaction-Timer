@@ -1,12 +1,14 @@
 <template>
-    <h1>How fast can you catch me??!</h1>
+    
+      <h1>How fast can you catch me??!</h1>
     <button v-on:click="startGame" :disabled="clPlay">Play</button>
     <div v-if="clPlay">
       <Block v-bind:delaying="delay" v-on:scoring="endGame"></Block>
     </div> 
     <div v-if="resultText">
       <Result v-bind:fScore="scores"></Result>
-    </div>   
+    </div>
+     
   
   
 </template>
@@ -53,5 +55,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+body{
+  background-color: dimgray;
+  margin: 0;
 }
 </style>
